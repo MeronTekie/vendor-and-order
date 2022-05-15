@@ -7,7 +7,7 @@ namespace VendorAndOrder.Tests
   [TestClass]
   public class VendorTests:IDisposable
   {
-     public void Dispose()
+    public void Dispose()
     {
       Vendor.ClearAll();
     }
@@ -25,7 +25,7 @@ namespace VendorAndOrder.Tests
       string result = newVendor.VendorName;
       Assert.AreEqual(vendor, result);
     }
-     [TestMethod]
+    [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       string vendor = "Suzie Bakery";
@@ -83,8 +83,6 @@ namespace VendorAndOrder.Tests
       string descriptionResult = newVendor.Description;
       Assert.AreEqual(vendor01, nameResult);
       Assert.AreEqual(description, descriptionResult);
-
     }
-
   }
 }
