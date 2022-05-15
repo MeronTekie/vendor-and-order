@@ -5,16 +5,31 @@ namespace VendorAndOrder.Models
   public class Order
   {
     private static List<Order> _instances = new List<Order> {};
+    private static int PricePerCake = 5;
+  
     public string Name { get; set; }
+    public string Title  { get; set;}
+    public int TotalPrice{ get; set; }
+    public int PhoneNumber{get; set;}
+    public string Date{get;set;}
     public int Id { get; }
-    public List<Order> Items { get; set; }
+    
 
-    public Order(string OrderName)
+    
+    public int Price{ get; set; }
+    public List<Order> Orders { get; set; }
+
+    public Order(string name,string title ,int totalprice,int phonenumber,string date)
+
     {
-      Name = OrderName;
+      Name =name;
+      Title= title;
+      TotalPrice =totalprice * PricePerCake;
+      PhoneNumber =phonenumber;
+      Date =date;
       _instances.Add(this);
       Id = _instances.Count;
-      Items = new List<Order>{};
+      
     }
 
     public static void ClearAll()
@@ -32,10 +47,7 @@ namespace VendorAndOrder.Models
       return _instances[searchId-1];
     }
 
-    public void AddItem(Order item)
-    {
-      Items.Add(item);
-    }
+    
 
   }
 }

@@ -2,20 +2,20 @@ using System.Collections.Generic;
 
 namespace VendorAndOrder.Models
 {
-  public class Item
+  public class Vendor
   {
     public string VendorName { get; set; }
     public int Id { get; }
-    private static List<Item> _instances = new List<Item> { };
+    private static List<Vendor> _instances = new List<Vendor> { };
 
-    public Item(string vendor)
+    public Vendor(string vendor)
     {
       VendorName = vendor;
       _instances.Add(this);
       Id = _instances.Count;
     }
 
-    public static List<Item> GetAll()
+    public static List<Vendor> GetAll()
     {
       return _instances;
     }
@@ -24,7 +24,7 @@ namespace VendorAndOrder.Models
     {
       _instances.Clear();
     }
-    public static Item Find(int searchId)
+    public static Vendor Find(int searchId)
     {
       return _instances[searchId-1];
     }

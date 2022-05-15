@@ -1,10 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
+using VendorAndOrder.Models;
 
-namespace VendorAndOrder.Controllers
+namespace Vendor.Controllers
 {
   public class OrdersAndVendorController : Controller
   {
-    [HttpGet("/OrdersAndVendor")]
+    [HttpPost("/OrdersAndVendor")]
     public ActionResult New() 
     { 
       return View();

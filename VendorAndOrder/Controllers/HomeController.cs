@@ -9,6 +9,5 @@ namespace HomeController.Controllers
     { 
       return View();
     }
-
   }
 }
