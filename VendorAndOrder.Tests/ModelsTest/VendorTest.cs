@@ -33,5 +33,32 @@ namespace VendorAndOrder.Tests
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
     }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendorObjects_VendorList()
+    {
+      string vendor01 = "Suzie Bakery";
+      string vendor02 = "Porrtland Coffee shop";
+      string vendor03 = "Seattle Restaurant";
+      Vendor newVendor01 = new Vendor(vendor01, "Pizzeria and Fastfood");
+      Vendor newVendor02 = new Vendor(vendor02, "Coffee shop");
+      Vendor newVendor03 = new Vendor(vendor03, "Restaurant");
+      List<Vendor>newList = new List<Vendor> { newVendor01, newVendor02 ,newVendor03};
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      string vendor01 = "Suzie Bakery";
+      string vendor02 = "Porrtland Coffee shop";
+      string vendor03 = "Seattle Restaurant";
+      Vendor newVendor01 = new Vendor(vendor01, "Pizzeria and Fastfood");
+      Vendor newVendor02 = new Vendor(vendor02, "Coffee shop");
+      Vendor newVendor03 = new Vendor(vendor03, "Restaurant");
+      List<Vendor>newList = new List<Vendor> { newVendor01, newVendor02 ,newVendor03};
+    
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(newVendor02, result);
+    }
   }
 }
