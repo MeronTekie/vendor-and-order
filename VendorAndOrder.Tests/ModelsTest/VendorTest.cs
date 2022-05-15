@@ -60,5 +60,31 @@ namespace VendorAndOrder.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor02, result);
     }
+    [TestMethod]
+    public void AddItem_AssociatesItemWithVendor_OrderList()
+    {
+      int price = 78;
+      Order newOrder = new Order("name","title",price, 1, "1");
+      List<Order> newList = new List<Order> { newOrder };
+      string vendor01 = "Suzie Bakery";
+      Vendor newVendor = new Vendor(vendor01, "Pizzeria and Fastfood");
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
+        [TestMethod]
+    public void Getdescription_ReturnsDescripton_String()
+    {
+      string vendor01 = "Suzie Bakery";
+      string description = "Pizzeria and Fastfood";
+      Vendor newVendor = new Vendor(vendor01, description);
+      Vendor nextVendor = new Vendor("Porrtland Coffee shop", "Coffee shop");
+      string nameResult = newVendor.VendorName;
+      string descriptionResult = newVendor.Description;
+      Assert.AreEqual(vendor01, nameResult);
+      Assert.AreEqual(description, descriptionResult);
+
+    }
+
   }
 }
