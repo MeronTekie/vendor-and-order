@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Jobs Here</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="~/css/styles.css" />
+</head>
+<body>
+@using VendorAndOrder.Models;
+<h1> List Of Vendors</h1>
+<h1>Vendor: </h1>
+
+<h1>Vendor: @Model["vendor"].VendorName</h1>
+<h3> @Model["order"].Name</h3>
+<h3>@Model["order"].Title</h3>
+<h3>@Model["order"].TotalPrice</h3>
+<h3>$@Model["order"].PhoneNumber</h3>
+<h3>@Model["order"].Date</h3>
+
+
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a New Vendor</a></p>
+<p><a href='/vendors/@Model["vendor"].Id'>Vendor</a></p>
+<p><a href='/vendors'>Listv Of Vendors</a></p>
+<p><a href='/'>Home</a></p>
+
+</body>
+</html>

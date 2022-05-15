@@ -5,7 +5,7 @@ namespace VendorAndOrder.Models
   public class Order
   {
     private static List<Order> _instances = new List<Order> {};
-    private static int PricePerCake = 5;
+    private static int PricePerCake = 3;
   
     public string Name { get; set; }
     public string Title  { get; set;}

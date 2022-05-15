@@ -8,7 +8,6 @@ namespace VendorAndOrder.Models
     private static List<Vendor> _instances = new List<Vendor> { };
     public string Description{get; set;}
     public string VendorName { get; set; }
-    public string PersonPicking{get; set;}
     public List<Order> Orders { get; set;}
     
     

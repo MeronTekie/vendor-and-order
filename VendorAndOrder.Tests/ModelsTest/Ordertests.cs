@@ -84,8 +84,6 @@ namespace VendorOrder.Tests
       Assert.AreEqual(phonenumber, phonenumberResult);
       Assert.AreEqual(price, priceResult);
       Assert.AreEqual(date, dateResult);
-
     }
-
   }
 }
