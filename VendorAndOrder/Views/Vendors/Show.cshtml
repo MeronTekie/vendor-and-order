@@ -9,17 +9,15 @@
 </head>
 <body>
   @using VendorAndOrder.Models;
-
-    <h1>List Of Order For the Vendor:</h1>
-    <ul>
-    @foreach (Order order in @Model["order"])
-    {
-      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
-    }
-    </ul>
-
-    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
-    <p><a href='/vendors'>Return To Vendor</a></p>
-    <p><a href='/'>Home</a></p> 
+  <h1>List Of Order For the Vendor:</h1>
+  <ul>
+  @foreach (Order order in @Model["order"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+  }
+  </ul>
+  <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+  <p><a href='/vendors'>Vendor</a></p>
+  <p><a href='/'>Home</a></p> 
 </body>
 </html>

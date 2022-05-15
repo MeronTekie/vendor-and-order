@@ -13,7 +13,6 @@ namespace VendorAndOrder.Models
     public int PhoneNumber{get; set;}
     public string Date{get;set;}
     public int Id { get; }
-    public int Price{ get; set; }
     public List<Order> Orders { get; set; }
     public Order(string name,string title ,int totalprice,int phonenumber,string date)
 
