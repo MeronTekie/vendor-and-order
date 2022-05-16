@@ -12,11 +12,11 @@
   @using VendorAndOrder.Models;
   <h1> List Of Vendors</h1>
   <h1>Vendor: @Model["vendor"].VendorName</h1>
-  <h3> @Model["order"].Name</h3>
-  <h3>@Model["order"].Title</h3>
-  <h3>@Model["order"].TotalPrice</h3>
-  <h3>$@Model["order"].PhoneNumber</h3>
-  <h3>@Model["order"].Date</h3>
+  <h3>Name:  @Model["order"].Name</h3>
+  <h3>Title: @Model["order"].Title</h3>
+  <h3>Total Price: @Model["order"].TotalPrice USD</h3>
+  <h3>Phone Number: @Model["order"].PhoneNumber </h3>
+  <h3>Date: @Model["order"].Date</h3>
 
   <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a New Vendor</a></p>
   <p><a href='/vendors/@Model["vendor"].Id'>Vendor</a></p>
