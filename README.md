@@ -2,7 +2,7 @@
 
 #### Meron G.Tekie
 
-#### The application is built for Pierre Bakery, It is abe to sort vendors's orders in a list by enabling the customer's to input multiple information of their order like name, title phone-number.
+#### The application is built for Pierre Bakery, It is abe to sort vendor's orders in a list by enabling the customer's to input multiple information of their order like name, title phone-number.
 
 ## Technologies Used
 
@@ -14,7 +14,7 @@
 
 - .NET 6.0( Compatible with .net5.0 as well )
 
-- ASP.NETCore MVC
+- ASP.NET Core MVC
 
 - MSTest
 
