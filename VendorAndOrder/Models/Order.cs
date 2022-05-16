@@ -5,7 +5,7 @@ namespace VendorAndOrder.Models
   public class Order
   {
     private static List<Order> _instances = new List<Order> {};
-    private static int PricePerCake = 3;
+    private static int _PricePerCake = 3;
   
     public string Name { get; set; }
     public string Title  { get; set;}
@@ -19,7 +19,7 @@ namespace VendorAndOrder.Models
     {
       Name =name;
       Title= title;
-      TotalPrice =totalprice * PricePerCake;
+      TotalPrice =totalprice * _PricePerCake;
       PhoneNumber =phonenumber;
       Date =date;
       _instances.Add(this);
